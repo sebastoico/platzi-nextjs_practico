@@ -1,0 +1,70 @@
+@use "_vars.scss";
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 24px;
+  border-bottom: 1px solid var(--very-light-pink);
+  position: sticky;
+  top: 0;
+  background-color: var(--white);
+}
+
+.menu {
+  display: none;
+}
+.menu:hover {
+  cursor: pointer;
+}
+.nav-logo {
+  width: 100px;
+}
+.nav-logo:hover {
+  cursor: pointer;
+}
+.navbar-left {
+  display: flex;
+}
+.navbar-left ul, .navbar-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+.navbar-left ul {
+  margin-left: 24px;
+}
+.navbar-left ul li a {
+  text-decoration: none;
+  color: var(--very-light-pink);
+  border: 1px solid var(--white);
+  padding: 8px;
+  border-radius: 8px;
+  font-size: var(--md);
+}
+.navbar-left ul li a:hover {
+  color: var(--hospital-green);
+  border: 1px solid var(--hospital-green);
+}
+.navbar-email {
+  font-size: var(--md);
+  color: var(--black);
+  margin-right: 16px;
+}
+.navbar-email:hover {
+  cursor: pointer;
+}
+.navbar-shopping-cart:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .menu {
+    display: block;
+  }
+  .navbar-left ul, .navbar-email {
+    display: none;
+  }
+}
