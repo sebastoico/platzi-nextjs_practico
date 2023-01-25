@@ -1,4 +1,5 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext} from 'react';
+import Image from "next/image";
 import OrderItem from '@components/OrderItem';
 import AppContext from "@context/AppContext";
 import styles from '@styles/MyOrder.module.scss';
@@ -16,25 +17,25 @@ const MyOrder = () => {
 
   return (
     <div className={styles.MyOrder}>
-      <div className="title-container">
-        <img src={flecha} alt="arrow" onClick={() => toggleOrder()}/>
-        <p className="title">My order</p>
+      <div className={styles['title-container']}>
+        <Image src={flecha} alt="arrow" onClick={() => toggleOrder()}/>
+        <p className={styles.title}>My order</p>
       </div>
     
-      <div className="MyOrder-products">
+      <div className={styles['MyOrder-products']}>
         {cart.map((product, index) => (
           <OrderItem product={product} key={`orderItem-${product.id + index}`} indexValue={index}/>
         ))}
       </div>
       
-      <div className="MyOrder-bottom">
-        <div className="order">
+      <div className={styles['MyOrder-bottom']}>
+        <div className={styles.order}>
           <p>
             <span>Total</span>
           </p>
           <p>$ {sumTotal()}.00</p>
         </div>
-        <button className="primary-button">
+        <button className={styles['primary-button']}>
           Checkout
         </button>
       </div>

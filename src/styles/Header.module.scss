@@ -13,11 +13,16 @@
 .menu {
   display: none;
 }
+.menu img {
+  width: 25px;
+  height: 100%;
+}
 .menu:hover {
   cursor: pointer;
 }
 .nav-logo {
   width: 100px;
+  height: 100%;
 }
 .nav-logo:hover {
   cursor: pointer;

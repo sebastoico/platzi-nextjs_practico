@@ -16,8 +16,10 @@ const Header = () => {
 
   return (
     <nav className={styles.Nav}>
-      <Image src={menuLogo} alt="menu" className={styles.menu} onClick={() => toggleMobileMenu()}/>
-      {state.mobileMenuIsOpen && <MobileMenu />}
+      <div className={styles.menu} >
+        <Image src={menuLogo} alt="menu" onClick={() => toggleMobileMenu()}/>
+        {state.mobileMenuIsOpen && <MobileMenu />}
+      </div>
 
       <div className={styles['navbar-left']}>
         <Image src={yardSaleLogo} alt="logo" className={styles['nav-logo']} />
@@ -59,7 +61,7 @@ const Header = () => {
       {state.menuIsOpen && <Menu/>}
       {state.orderIsOpen && <MyOrder/>}
     </nav>
-  );
+  )
 };
 
 export default Header;

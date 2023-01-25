@@ -41,10 +41,10 @@ const MobileMenu = () => {
       </div>
       <ul>
         <li>
-          <a href="/" className="email">email@yardsale.com</a>
+          <a href="/" className={styles.email}>email@yardsale.com</a>
         </li>
         <li>
-          <a href="/" className="sign-out">Sign out</a>
+          <a href="/" className={styles['sign-out']}>Sign out</a>
         </li>
       </ul>
     </div>
