@@ -102,6 +102,16 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+}
+
+body:hover {
+  cursor: default;
+}
+
+input, textarea, button {
+  font-family: inherit;
 }
 
 a {

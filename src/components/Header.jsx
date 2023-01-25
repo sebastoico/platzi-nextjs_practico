@@ -15,11 +15,11 @@ const Header = () => {
 
   return (
     <nav className={styles.Nav}>
-      <img src={menuLogo} alt="menu" className="menu" onClick={() => toggleMobileMenu()}/>
+      <img src={menuLogo} alt="menu" className={styles.menu} onClick={() => toggleMobileMenu()}/>
       {state.mobileMenuIsOpen && <MobileMenu />}
 
-      <div className="navbar-left">
-        <img src={yardSaleLogo} alt="logo" className="nav-logo" />
+      <div className={styles['navbar-left']}>
+        <img src={yardSaleLogo} alt="logo" className={styles['nav-logo']} />
         <ul>
           <li>
             <a href="/">All</a>
@@ -42,12 +42,12 @@ const Header = () => {
         </ul>
       </div>
 
-      <div className="navbar-right">
+      <div className={styles['navbar-right']}>
         <ul>
-          <li className="navbar-email" onClick={() => toggleMenu()}>
+          <li className={styles['navbar-email']} onClick={() => toggleMenu()}>
             email@yardsale.com
           </li>
-          <li className="navbar-shopping-cart" onClick={() => toggleOrder()}>
+          <li className={styles['navbar-shopping-cart']} onClick={() => toggleOrder()}>
             <img 
               src={state.cart.length > 0 ? shoppingCartLogo : shoppingCartNotLogo} 
               alt="shopping cart" 
