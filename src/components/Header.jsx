@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "@styles/Header.scss";
+import styles from "@styles/Header.module.scss";
 import MobileMenu from "@components/MobileMenu.jsx";
 import Menu from "@components/Menu.jsx";
 import MyOrder from "@containers/MyOrder";
@@ -14,7 +14,7 @@ const Header = () => {
   const {state, toggleMenu, toggleOrder, toggleMobileMenu} = useContext(AppContext);
 
   return (
-    <nav>
+    <nav className={styles.Nav}>
       <img src={menuLogo} alt="menu" className="menu" onClick={() => toggleMobileMenu()}/>
       {state.mobileMenuIsOpen && <MobileMenu />}
 

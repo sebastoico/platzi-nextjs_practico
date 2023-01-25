@@ -1,10 +1,10 @@
-@use "_vars.scss";
+@import "_vars.scss";
 
 .MobileMenu {
   position: absolute;
   top: 61px;
   padding: 24px;
-  background-color: var(--white);
+  background-color: $--white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -17,7 +17,7 @@
   list-style: none;
 }
 .MobileMenu ul:first-child {
-  border-bottom: 1px solid var(--very-light-pink);
+  border-bottom: 1px solid $--very-light-pink;
 }
 .MobileMenu > ul:last-child li:first-child{
   margin-bottom: 12px;
@@ -27,17 +27,17 @@
 }
 .MobileMenu ul li a {
   text-decoration: none;
-  color: var(--black);
+  color: $--black;
   font-weight: bold;
 }
 .MobileMenu .email {
-  font-size: var(--sm);
+  font-size: $--sm;
   font-weight: lighter;
   margin-bottom: 12px;
 }
 .MobileMenu .sign-out {
-  font-size: var(--sm);
-  color: var(--hospital-green);
+  font-size: $--sm;
+  color: $--hospital-green;
 }
 
 @media (min-width: 641px) {

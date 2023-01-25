@@ -1,4 +1,4 @@
-@use "_vars.scss";
+@import "_vars.scss";
 
 .OrderItem {
   display: grid;
@@ -17,11 +17,11 @@
   object-fit: cover;
 }
 .OrderItem p:nth-child(2) {
-  color: var(--very-light-pink);
-  font-size: var(--sm);
+  color: $--very-light-pink;
+  font-size: $--sm;
 }
 .OrderItem p:last-child {
-  font-size: var(--md);
+  font-size: $--md;
   font-weight: bold;
 }
 .OrderItem:last-child:hover {
