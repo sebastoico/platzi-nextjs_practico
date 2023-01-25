@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import "@styles/Header.scss";
 import MobileMenu from "@components/MobileMenu.jsx";
 import Menu from "@components/Menu.jsx";
