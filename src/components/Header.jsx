@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import Image from "next/image";
 import styles from "@styles/Header.module.scss";
 import MobileMenu from "@components/MobileMenu.jsx";
 import Menu from "@components/Menu.jsx";
@@ -15,11 +16,11 @@ const Header = () => {
 
   return (
     <nav className={styles.Nav}>
-      <img src={menuLogo} alt="menu" className={styles.menu} onClick={() => toggleMobileMenu()}/>
+      <Image src={menuLogo} alt="menu" className={styles.menu} onClick={() => toggleMobileMenu()}/>
       {state.mobileMenuIsOpen && <MobileMenu />}
 
       <div className={styles['navbar-left']}>
-        <img src={yardSaleLogo} alt="logo" className={styles['nav-logo']} />
+        <Image src={yardSaleLogo} alt="logo" className={styles['nav-logo']} />
         <ul>
           <li>
             <a href="/">All</a>
@@ -48,7 +49,7 @@ const Header = () => {
             email@yardsale.com
           </li>
           <li className={styles['navbar-shopping-cart']} onClick={() => toggleOrder()}>
-            <img 
+            <Image 
               src={state.cart.length > 0 ? shoppingCartLogo : shoppingCartNotLogo} 
               alt="shopping cart" 
             />
