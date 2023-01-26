@@ -11,10 +11,10 @@ const OrderItem = ({product}) => {
   return (
     <div className={styles.OrderItem}>
       <figure>
-        <Image loader={() => product.images[0]} src={product.images[0]} alt={product.title} width={100} height={100}/>
+        <Image loader={() => product?.images[0]} src={product?.images[0]} alt={product?.title} width={100} height={100}/>
       </figure>
-      <p>{product.title}</p>
-      <p>$ {product.price}.00</p>
+      <p>{product?.title}</p>
+      <p>$ {product?.price}.00</p>
       <Image src={cerrar} alt="close" onClick={() => removeFromCart(product)}/>
     </div>
   );

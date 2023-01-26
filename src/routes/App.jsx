@@ -1,18 +1,18 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Layout from "../containers/Layout.jsx";
-import Home from "../pages/Home.jsx";
-import Login from "../pages/Login.jsx";
-import PasswordRecovery from "../pages/PasswordRecovery.jsx";
-import SendEmail from "../pages/SendEmail.jsx";
-import NewPassword from "../pages/NewPassword.jsx";
-import MyAccount from "../pages/MyAccount.jsx";
-import CreateAccount from "../pages/CreateAccount.jsx";
-import Checkout from "../pages/Checkout.jsx";
-import Orders from "../pages/Orders.jsx";
-import NotFound from "../pages/NotFound.jsx";
-import AppContext from "../context/AppContext.js";
-import useInitialState from "../hooks/useInitialState.js";
+import Layout from "@containers/Layout.jsx";
+import Home from "@templates/Home.jsx";
+import Login from "@templates/Login.jsx";
+import PasswordRecovery from "@templates/PasswordRecovery.jsx";
+import SendEmail from "@templates/SendEmail.jsx";
+import NewPassword from "@templates/NewPassword.jsx";
+import MyAccount from "@templates/MyAccount.jsx";
+import CreateAccount from "@templates/CreateAccount.jsx";
+import Checkout from "@templates/Checkout.jsx";
+import Orders from "@templates/Orders.jsx";
+import NotFound from "@templates/NotFound.jsx";
+import AppContext from "@context/AppContext.js";
+import useInitialState from "@hooks/useInitialState.js";
 import "@styles/global.css";
 
 const App = () => {
