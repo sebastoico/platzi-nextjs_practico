@@ -1,8 +1,17 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import OrderItem from '@components/OrderItem';
+import AppContext from "@context/AppContext";
 import styles from '@styles/Checkout.module.scss';
 
 const Checkout = () => {
+  const {state:{cart}, toggleMenu, toggleOrder, toggleMobileMenu} = useContext(AppContext);
+
+  const sumTotal = () => {
+    const reducer = (accumulator, currentValue) => accumulator + currentValue.price;
+    const sum = cart.reduce(reducer, 0);
+    return sum;
+  };
+
   return (
     <div className={styles.Checkout}>
       <div className={styles['Checkout-container']}>
@@ -11,11 +20,13 @@ const Checkout = () => {
           <div className={styles.order}>
             <p>
               <span>04.25.2021</span>
-              <span>6 articles</span>
+              <span>{cart.length} articles</span>
             </p>
-            <p>$ 560.00</p>
+            <p>$ {sumTotal()}.00</p>
           </div>
-          <OrderItem />
+          {cart.map((product, index) => (
+            <OrderItem product={product} key={`orderItem-${product.id + index}`} indexValue={index}/>
+          ))}
         </div>
       </div>
     </div>

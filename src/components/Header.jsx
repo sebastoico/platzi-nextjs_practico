@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
+import Link from "next/link";
 import Image from "next/image";
-import styles from "@styles/Header.module.scss";
 import MobileMenu from "@components/MobileMenu.jsx";
 import Menu from "@components/Menu.jsx";
 import MyOrder from "@containers/MyOrder";
 import AppContext from "@context/AppContext";
+import styles from "@styles/Header.module.scss";
 
 import yardSaleLogo from "@logos/logo_yard_sale.svg";
 import menuLogo from "@icons/icon_menu.svg";
@@ -22,7 +23,9 @@ const Header = () => {
       </div>
 
       <div className={styles['navbar-left']}>
-        <Image src={yardSaleLogo} alt="logo" className={styles['nav-logo']} />
+        <Link href="/">
+          <Image src={yardSaleLogo} alt="logo" className={styles['nav-logo']} />
+        </Link>
         <ul>
           <li>
             <a href="/">All</a>
