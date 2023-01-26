@@ -20,21 +20,21 @@
   align-items: center;
   margin-top: 8px;
 }
-.product-info figure {
+.product-info div:last-child {
   margin: 0;
 
 }
-.product-info figure img {
+.product-info div:last-child img {
   width: 32px;
   height: 32px;
 }
-.product-info div p:nth-child(1) {
+.product-info div:first-child p:nth-child(1) {
   font-weight: bold;
   font-size: $--md;
   margin-top: 0px;
   margin-bottom: 2px;
 }
-.product-info div p:nth-child(2) {
+.product-info div:first-child p:nth-child(2) {
   font-size: $--sm;
   margin: 0;
   color: $--very-light-pink;

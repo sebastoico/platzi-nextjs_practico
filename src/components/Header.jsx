@@ -1,24 +1,24 @@
-import React, { useContext } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import MobileMenu from "@components/MobileMenu.jsx";
-import Menu from "@components/Menu.jsx";
-import MyOrder from "@containers/MyOrder";
-import AppContext from "@context/AppContext";
-import styles from "@styles/Header.module.scss";
+import React, { useContext } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import MobileMenu from '@components/MobileMenu.jsx';
+import Menu from '@components/Menu.jsx';
+import MyOrder from '@containers/MyOrder';
+import AppContext from '@context/AppContext';
+import styles from '@styles/Header.module.scss';
 
-import yardSaleLogo from "@logos/logo_yard_sale.svg";
-import menuLogo from "@icons/icon_menu.svg";
-import shoppingCartLogo from "@icons/icon_shopping_cart_notification.svg";
-import shoppingCartNotLogo from "@icons/icon_shopping_cart.svg";
+import yardSaleLogo from '@logos/logo_yard_sale.svg';
+import menuLogo from '@icons/icon_menu.svg';
+import shoppingCartLogo from '@icons/icon_shopping_cart_notification.svg';
+import shoppingCartNotLogo from '@icons/icon_shopping_cart.svg';
 
 const Header = () => {
-  const {state, toggleMenu, toggleOrder, toggleMobileMenu} = useContext(AppContext);
+  const { state, toggleMenu, toggleOrder, toggleMobileMenu } = useContext(AppContext);
 
   return (
     <nav className={styles.Nav}>
-      <div className={styles.menu} >
-        <Image src={menuLogo} alt="menu" onClick={() => toggleMobileMenu()}/>
+      <div className={styles.menu}>
+        <Image src={menuLogo} alt="menu" onClick={() => toggleMobileMenu()} onKeyDown={() => toggleMobileMenu()} />
         {state.mobileMenuIsOpen && <MobileMenu />}
       </div>
 
@@ -28,43 +28,40 @@ const Header = () => {
         </Link>
         <ul>
           <li>
-            <a href="/">All</a>
+            <Link href="/">All</Link>
           </li>
           <li>
-            <a href="/">Clothes</a>
+            <Link href="/">Clothes</Link>
           </li>
           <li>
-            <a href="/">Electronics</a>
+            <Link href="/">Electronics</Link>
           </li>
           <li>
-            <a href="/">Furniture</a>
+            <Link href="/">Furniture</Link>
           </li>
           <li>
-            <a href="/">Toys</a>
+            <Link href="/">Toys</Link>
           </li>
           <li>
-            <a href="/">Others</a>
+            <Link href="/">Others</Link>
           </li>
         </ul>
       </div>
 
       <div className={styles['navbar-right']}>
         <ul>
-          <li className={styles['navbar-email']} onClick={() => toggleMenu()}>
+          <div role="button" tabIndex={0} className={styles['navbar-email']} onClick={() => toggleMenu()} onKeyDown={() => toggleMenu()}>
             email@yardsale.com
-          </li>
-          <li className={styles['navbar-shopping-cart']} onClick={() => toggleOrder()}>
-            <Image 
-              src={state.cart.length > 0 ? shoppingCartLogo : shoppingCartNotLogo} 
-              alt="shopping cart" 
-            />
-          </li>
+          </div>
+          <div role={'button'} tabIndex={0} className={styles['navbar-shopping-cart']} onClick={() => toggleOrder()} onKeyDown={() => toggleOrder()}>
+            <Image src={state.cart.length > 0 ? shoppingCartLogo : shoppingCartNotLogo} alt="shopping cart" />
+          </div>
         </ul>
       </div>
-      {state.menuIsOpen && <Menu/>}
-      {state.orderIsOpen && <MyOrder/>}
+      {state.menuIsOpen && <Menu />}
+      {state.orderIsOpen && <MyOrder />}
     </nav>
-  )
+  );
 };
 
 export default Header;

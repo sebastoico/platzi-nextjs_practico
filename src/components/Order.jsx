@@ -1,5 +1,6 @@
 import React from 'react';
-import "@styles/Order.scss";
+import Image from 'next/image';
+import '@styles/Order.scss';
 
 const Order = () => {
   return (
@@ -16,35 +17,35 @@ const Order = () => {
           </div>
           <div className="shopping-cart">
             <figure>
-              <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="bike" />
+              <Image src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="bike" />
             </figure>
             <p>Bike</p>
             <p>$ 120.00</p>
           </div>
           <div className="shopping-cart">
             <figure>
-              <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="bike" />
+              <Image src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="bike" />
             </figure>
             <p>Bike</p>
             <p>$ 120.00</p>
           </div>
           <div className="shopping-cart">
             <figure>
-              <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="bike" />
+              <Image src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="bike" />
             </figure>
             <p>Bike</p>
             <p>$ 120.00</p>
           </div>
           <div className="shopping-cart">
             <figure>
-              <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="bike" />
+              <Image src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="bike" />
             </figure>
             <p>Bike</p>
             <p>$ 120.00</p>
           </div>
           <div className="shopping-cart">
             <figure>
-              <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="bike" />
+              <Image src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="bike" />
             </figure>
             <p>Bike</p>
             <p>$ 120.00</p>
@@ -53,6 +54,6 @@ const Order = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Order;

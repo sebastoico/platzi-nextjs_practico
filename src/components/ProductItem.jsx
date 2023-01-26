@@ -1,5 +1,5 @@
-import React, { useContext, useState } from 'react';
-import Image from "next/image";
+import React, { useContext } from 'react';
+import Image from 'next/image';
 import AppContext from '@context/AppContext';
 
 import addToCartLogo from '@icons/bt_add_to_cart.svg';
@@ -7,9 +7,12 @@ import addedToCartLogo from '@icons/bt_added_to_cart.svg';
 
 import styles from '@styles/ProductItem.module.scss';
 
-const ProductItem = ({product}) => {
-  const {state:{cart}, addToCart, removeFromCart} = useContext(AppContext);
-  const [toggle, setToggle] = useState(false);
+const ProductItem = ({ product }) => {
+  const {
+    state: { cart },
+    addToCart,
+    removeFromCart,
+  } = useContext(AppContext);
 
   const isInCart = () => cart.some((item) => item.id === product.id);
 
@@ -25,12 +28,12 @@ const ProductItem = ({product}) => {
           <p>$ {product.price}.00</p>
           <p>{product.title}</p>
         </div>
-        <figure onClick={handleClick}>
+        <div role={'button'} tabIndex={0} onClick={handleClick} onKeyDown={handleClick}>
           <Image src={isInCart() ? addedToCartLogo : addToCartLogo} alt="" />
-        </figure>
+        </div>
       </div>
     </div>
   );
-}
+};
 
 export default ProductItem;

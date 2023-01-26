@@ -1,10 +1,12 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import OrderItem from '@components/OrderItem';
-import AppContext from "@context/AppContext";
+import AppContext from '@context/AppContext';
 import styles from '@styles/Checkout.module.scss';
 
 const Checkout = () => {
-  const {state:{cart}, toggleMenu, toggleOrder, toggleMobileMenu} = useContext(AppContext);
+  const {
+    state: { cart },
+  } = useContext(AppContext);
 
   const sumTotal = () => {
     const reducer = (accumulator, currentValue) => accumulator + currentValue.price;
@@ -25,12 +27,12 @@ const Checkout = () => {
             <p>$ {sumTotal()}.00</p>
           </div>
           {cart.map((product, index) => (
-            <OrderItem product={product} key={`orderItem-${product.id + index}`} indexValue={index}/>
+            <OrderItem product={product} key={`orderItem-${product.id + index}`} indexValue={index} />
           ))}
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Checkout;

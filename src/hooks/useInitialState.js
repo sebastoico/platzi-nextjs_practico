@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 const initialState = {
   cart: [],
   menuIsOpen: false,
   orderIsOpen: false,
-  mobileMenuIsOpen: false
+  mobileMenuIsOpen: false,
 };
 
 const useInitialState = () => {
@@ -13,15 +13,15 @@ const useInitialState = () => {
   const addToCart = (payload) => {
     setState({
       ...state,
-      cart: [...state.cart, payload]
+      cart: [...state.cart, payload],
     });
   };
 
   const removeFromCart = (payload) => {
     setState({
       ...state,
-      cart: state.cart.filter((product, index) => product.id !== payload.id)
-    })
+      cart: state.cart.filter((product) => product.id !== payload.id),
+    });
   };
 
   const toggleOrder = () => {
@@ -29,7 +29,7 @@ const useInitialState = () => {
       ...state,
       orderIsOpen: !state.orderIsOpen,
       menuIsOpen: false,
-      mobileMenuIsOpen: false
+      mobileMenuIsOpen: false,
     });
   };
 
@@ -38,8 +38,8 @@ const useInitialState = () => {
       ...state,
       menuIsOpen: !state.menuIsOpen,
       orderIsOpen: false,
-      mobileMenuIsOpen: false
-    })
+      mobileMenuIsOpen: false,
+    });
   };
 
   const toggleMobileMenu = () => {
@@ -47,9 +47,9 @@ const useInitialState = () => {
       ...state,
       mobileMenuIsOpen: !state.mobileMenuIsOpen,
       orderIsOpen: false,
-      menuIsOpen: false
-    })
-  }
+      menuIsOpen: false,
+    });
+  };
 
   return {
     state,
@@ -57,7 +57,7 @@ const useInitialState = () => {
     removeFromCart,
     toggleOrder,
     toggleMenu,
-    toggleMobileMenu
+    toggleMobileMenu,
   };
 };
 

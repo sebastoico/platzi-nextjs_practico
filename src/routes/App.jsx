@@ -1,19 +1,19 @@
-import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Layout from "@containers/Layout.jsx";
-import Home from "@templates/Home.jsx";
-import Login from "@templates/Login.jsx";
-import PasswordRecovery from "@templates/PasswordRecovery.jsx";
-import SendEmail from "@templates/SendEmail.jsx";
-import NewPassword from "@templates/NewPassword.jsx";
-import MyAccount from "@templates/MyAccount.jsx";
-import CreateAccount from "@templates/CreateAccount.jsx";
-import Checkout from "@templates/Checkout.jsx";
-import Orders from "@templates/Orders.jsx";
-import NotFound from "@templates/NotFound.jsx";
-import AppContext from "@context/AppContext.js";
-import useInitialState from "@hooks/useInitialState.js";
-import "@styles/global.css";
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Layout from '@containers/Layout.jsx';
+import Home from '@templates/Home.jsx';
+import Login from '@templates/Login.jsx';
+import PasswordRecovery from '@templates/PasswordRecovery.jsx';
+import SendEmail from '@templates/SendEmail.jsx';
+import NewPassword from '@templates/NewPassword.jsx';
+import MyAccount from '@templates/MyAccount.jsx';
+import CreateAccount from '@templates/CreateAccount.jsx';
+import Checkout from '@templates/Checkout.jsx';
+import Orders from '@templates/Orders.jsx';
+import NotFound from '@templates/NotFound.jsx';
+import AppContext from '@context/AppContext.js';
+import useInitialState from '@hooks/useInitialState.js';
+import '@styles/global.css';
 
 const App = () => {
   const initialState = useInitialState();
@@ -38,6 +38,6 @@ const App = () => {
       </BrowserRouter>
     </AppContext.Provider>
   );
-}
+};
 
 export default App;
