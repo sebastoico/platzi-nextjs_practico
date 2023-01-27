@@ -1,4 +1,4 @@
-@use "_vars.scss";
+@import "_vars.scss";
 
 .MyAccount {
   width: 100%;
@@ -15,7 +15,7 @@
 }
 
 .MyAccount-container .title {
-  font-size: var(--lg);
+  font-size: $--lg;
   margin-bottom: 32px;
   text-align: start;
 }
@@ -30,14 +30,14 @@
 }
 
 .label {
-  font-size: var(--sm);
+  font-size: $--sm;
   font-weight: bold;
   margin-bottom: 8px;
 }
 
 .value {
-  color: var(--very-light-pink);
-  font-size: var(--md);
+  color: $--very-light-pink;
+  font-size: $--md;
   height: 32px;
   padding: 6px;
   margin-top: 0px;
@@ -45,20 +45,16 @@
 }
 
 .secondary-button {
-  background-color: var(--white);
+  background-color: $--white;
   border-radius: 8px;
-  border: 1px solid var(--hospital-green);
+  border: 1px solid $--hospital-green;
   width: 100%;
-  height: 56px;
-  font-size: var(--md);
-  font-weight: bold;
-  color: var(--hospital-green);
-  padding: 6px;
   cursor: pointer;
-}
-
-.edit-button {
-  margin-top: 0px;
+  font-size: $--md;
+  font-weight: bold;
+  color: $--hospital-green;
+  height: 56px;
+  padding: 6px;
   margin-bottom: 32px;
 }
 

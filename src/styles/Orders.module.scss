@@ -1,4 +1,4 @@
-@use "_vars.scss";
+@import "_vars.scss";
 
 .Orders {
   width: 100%;
@@ -15,7 +15,7 @@
 }
 
 .title {
-  font-size: var(--lg);
+  font-size: $--lg;
   margin-bottom: 24px;
 }
 

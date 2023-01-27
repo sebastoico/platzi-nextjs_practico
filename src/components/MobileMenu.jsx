@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Link from 'next/link';
+import AppContext from '@context/AppContext';
 import styles from '@styles/MobileMenu.module.scss';
 
 const MobileMenu = () => {
+  const { toggleMobileMenu } = useContext(AppContext);
+
   return (
     <div className={styles.MobileMenu}>
       <div>
@@ -31,10 +34,14 @@ const MobileMenu = () => {
         </ul>
         <ul>
           <li>
-            <Link href="/">My orders</Link>
+            <Link href="/orders" role="button" tabIndex={0} onClick={() => toggleMobileMenu()} onKeyDown={() => toggleMobileMenu()}>
+              My orders
+            </Link>
           </li>
           <li>
-            <Link href="/">My account</Link>
+            <Link href="/account" role="button" tabIndex={0} onClick={() => toggleMobileMenu()} onKeyDown={() => toggleMobileMenu()}>
+              My account
+            </Link>
           </li>
         </ul>
       </div>

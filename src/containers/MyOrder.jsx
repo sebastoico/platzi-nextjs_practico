@@ -37,7 +37,7 @@ const MyOrder = () => {
           </p>
           <p>$ {sumTotal()}.00</p>
         </div>
-        <Link href="/checkout">
+        <Link href="/checkout" onClick={() => toggleOrder()}>
           <button className={styles['primary-button']}>Checkout</button>
         </Link>
       </div>

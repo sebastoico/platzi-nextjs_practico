@@ -27,9 +27,9 @@ const Header = () => {
           <Image src={yardSaleLogo} alt="logo" className={styles['nav-logo']} />
         </Link>
         <ul>
-          <li>
+          <div>
             <Link href="/">All</Link>
-          </li>
+          </div>
           <li>
             <Link href="/">Clothes</Link>
           </li>
