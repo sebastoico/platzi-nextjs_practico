@@ -9,7 +9,7 @@ const useGetProducts = (API) => {
       setProducts(response.data);
     };
     fetchData();
-  }, []);
+  }, [API]);
 
   return products;
 };
